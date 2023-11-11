@@ -1,36 +1,121 @@
 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   background-color: var(--blue--900);
-  padding: 2.5rem;
+  padding: 1.5rem;
+}
+footer a {
+  color: var(--blue--400);
 }
 .logo_socials_container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 3rem;
+  align-items: baseline;
+  gap: 0.8rem;
+}
+.logo_socials_container img {
+  width: 100%;
+  height: auto;
+  max-height: 46px;
+  max-width: 320px;
 }
 .socials {
   display: flex;
-  align-items: flex-end;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
   gap: 12px;
+}
+.icons_footer {
+  display: flex;
+  gap: 20px;
+}
+.title_card_footer {
+  color: var(--blue-100, #f9fafb);
+  font-size: 20px;
+  font-weight: 500;
+}
+.card_footer_info {
+  display: flex;
+  padding: 10px 0px;
+  align-items: center;
+  gap: 10px;
+}
+.card_footer_info.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.icon {
+  width: fit-content;
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--transparent-white, rgba(249, 250, 251, 0.1));
+}
+.flex_footer_container_cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.terms_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--blue--400);
+  gap: 0.8rem;
+}
+.links_terms_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 0.8rem;
 }
 /******************breakpoints**********************/
 /* xs */
-@media (min-width: 280px) {
+@media (min-width: 350px) {
 }
-/* sm */
-@media (min-width: 640px) {
+@media (min-width: 420px) {
+  footer {
+    padding: 2.5rem;
+  }
+  .links_terms_footer {
+    flex-direction: row;
+  }
 }
-/* md */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .logo_socials_container {
     flex-direction: row;
   }
+}
+/* sm */
+@media (min-width: 640px) {
+  .logo_socials_container {
+    align-items: center;
+  }
+  .flex_footer_container_cards {
+    flex-direction: row;
+  }
+}
+/* md */
+@media (min-width: 768px) {
   .socials {
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .socials p {
+    font-size: 20px;
   }
 }
 /* lg */
 @media (min-width: 1024px) {
+  .terms_footer {
+    flex-direction: row;
+  }
 }
 /* xl */
 @media (min-width: 1280px) {

@@ -12,13 +12,12 @@ ul {
   margin: 0;
 }
 input {
-  /* cursor: url('../assets/icons/cursor-hover.svg'), auto; */
   border: transparent;
   background-color: transparent;
 }
 a {
   width: fit-content;
-  /* cursor: url('../assets/icons/cursor-hover.svg'), auto; */
+  color: white;
 }
 textarea {
   resize: none;

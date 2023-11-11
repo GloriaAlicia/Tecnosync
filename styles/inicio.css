@@ -4,16 +4,7 @@
   align-items: center;
   justify-content: center;
   align-self: stretch;
-  background-image: radial-gradient(
-      circle farthest-side at 50% 300%,
-      rgb(151 71 255) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle farthest-side at 50% 120%,
-      rgb(151 71 255) 0%,
-      transparent 60%
-    );
+  background-image: var(--hero--gradient);
   position: relative;
   max-width: 1400px;
 }
