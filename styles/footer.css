@@ -1,0 +1,40 @@
+footer {
+  background-color: var(--blue--900);
+  padding: 2.5rem;
+}
+.logo_socials_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.socials {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+/******************breakpoints**********************/
+/* xs */
+@media (min-width: 280px) {
+}
+/* sm */
+@media (min-width: 640px) {
+}
+/* md */
+@media (min-width: 768px) {
+  .logo_socials_container {
+    flex-direction: row;
+  }
+  .socials {
+    flex-direction: column;
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+}
+/* xl */
+@media (min-width: 1280px) {
+}
+/* 2xl	 */
+@media (min-width: 1400px) {
+}

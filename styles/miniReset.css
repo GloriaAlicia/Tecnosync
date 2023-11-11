@@ -1,0 +1,45 @@
+*:focus {
+  outline: solid 1px transparent;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+}
+input {
+  /* cursor: url('../assets/icons/cursor-hover.svg'), auto; */
+  border: transparent;
+  background-color: transparent;
+}
+a {
+  width: fit-content;
+  /* cursor: url('../assets/icons/cursor-hover.svg'), auto; */
+}
+textarea {
+  resize: none;
+  border: none;
+  background-color: transparent;
+}
+img {
+  user-select: none;
+}
+address {
+  font-style: normal;
+}
+main,
+footer {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  overflow-x: hidden;
+}
+@media (min-width: 1800px) {
+  main {
+    width: auto;
+    overflow-x: hidden;
+  }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/miniReset.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/inicio.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Syne:wght@400;700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="shortcut icon" href="./favicon.png" />
+    <title>Tecnosync - agency</title>
+  </head>
+  <body class="layout">
+    <header class="content_nav">
+      <nav class="navbar">
+        <a href="./index.html">
+          <img
+            class="logo_nav"
+            src="./assets/images/logo.png"
+            width="180"
+            alt="Tecnosync logo" />
+        </a>
+
+        <div class="flex space_gap">
+          <li class="container_element tablet_responsive_nav">
+            <a class="menu_element" href="./contacto.html">Contacto</a>
+          </li>
+
+          <label class="container_mobile" for="open_nav">
+            <input type="checkbox" class="check_mobile" id="open_nav" />
+            <div class="checkmark">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </label>
+        </div>
+
+        <ul class="items">
+          <li class="container_element">
+            <a class="menu_element current_path" href="./index.html">Inicio</a>
+          </li>
+          <li class="container_element">
+            <a class="menu_element" href="./nosotros.html">Nosotros</a>
+          </li>
+          <li class="container_element">
+            <a class="menu_element" href="./proyectos.html">Proyectos</a>
+          </li>
+          <li class="container_element">
+            <a class="menu_element" href="./servicios.html">Servicios</a>
+          </li>
+          <li class="container_element">
+            <a class="menu_element" href="./contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero_landing">
+        <picture>
+          <img
+            sizes="(max-width: 2000px) 70vw,"
+            srcset="
+              ./assets/images/laptop-500-breakpoint.png  300w,
+              ./assets/images/laptop-1200-breakpoint.png 600w,
+              ./assets/images/laptop.png                 800w
+            "
+            src="./assets/images/laptop.png"
+            class="hero_laptop_home"
+            alt="laptop hero" />
+        </picture>
+
+        <div class="content_landing">
+          <div class="texts_hero">
+            <h1 class="title">
+              Tu agencia para el <span>éxito tecnológico</span>
+            </h1>
+            <p class="landing_text">
+              Únete a nosotros en este viaje de transformación tecnológica y
+              logros excepcionales.
+            </p>
+          </div>
+
+          <div class="buttons_container">
+            <a href="./nosotros.html"
+              ><button class="primary light_transparent">Conócenos</button></a
+            >
+            <a href="./proyectos.html"
+              ><button class="secondary hidden_button_home">
+                Ver proyectos
+              </button></a
+            >
+          </div>
+        </div>
+
+        <div class="liner">
+          <p>
+            Donde la estrategia e innovación convergen para tu
+            <span>éxito</span>.
+          </p>
+        </div>
+      </section>
+
+      <section class="container">contenido</section>
+    </main>
+
+    <footer>
+      <div class="logo_socials_container">
+        <img
+          src="./assets/images/logo_footer.png"
+          alt="logo Tecnosync"
+          width="280" />
+
+        <div class="socials">
+          <p>Síguenos</p>
+          <div class="icons">iconos</div>
+        </div>
+      </div>
+      <div>cards</div>
+      <div>terminos</div>
+    </footer>
+
+    <script src="./scripts/nav.js"></script>
+  </body>
+</html>

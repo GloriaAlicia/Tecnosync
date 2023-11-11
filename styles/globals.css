@@ -1,0 +1,337 @@
+:root {
+  font-family: 'Inter', Helvetica, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  --transparent-white: hsla(210, 20%, 98%, 0.15);
+  --blue--1000: hsla(222, 48.9%, 9.2%, 1);
+  --blue--900: hsla(215, 27.9%, 16.9%, 1);
+  --blue--800: hsla(217, 19.1%, 26.7%, 1);
+  --blue--700: hsla(215, 13.8%, 34.1%, 1);
+  --blue--600: hsla(220, 8.9%, 46.1%, 1);
+  --blue--500: hsla(218, 10.6%, 64.9%, 1);
+  --blue--400: hsla(216, 12.2%, 83.9%, 1);
+  --blue--300: hsla(220, 13%, 91%, 1);
+  --blue--200: hsla(220, 14.3%, 95.9%, 1);
+  --blue--100: hsla(210, 20%, 98%, 1);
+  --purple--light: hsla(266, 100%, 63.9%, 1);
+  --purple--light-200: hsla(266, 100%, 83.7%, 1);
+
+  --light--tranparent--gradient: linear-gradient(
+    90deg,
+    var(--purple--light) 0%,
+    hsla(266, 100%, 63.9%, 0.1) 100%
+  );
+
+  --radius: 16px;
+  --radius-medium: 50px;
+  --radius-big: 100px;
+}
+
+.light_gradient {
+  background: rgb(208, 172, 255);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(208, 172, 255, 1) 0%,
+    rgba(151, 71, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(208, 172, 255, 1) 0%,
+    rgba(151, 71, 255, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(208, 172, 255, 1) 0%,
+    rgba(151, 71, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d0acff",endColorstr="#9747ff",GradientType=1);
+}
+
+.light_transparent {
+  background: rgb(208, 172, 255);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(208, 172, 255, 0.3) 0%,
+    rgba(151, 71, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(208, 172, 255, 0.3) 0%,
+    rgba(151, 71, 255, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(208, 172, 255, 0.3) 0%,
+    rgba(151, 71, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d0acff",endColorstr="#9747ff",GradientType=1);
+}
+
+.card_gradient {
+  background: rgba(208, 172, 255, 0.4);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(208, 172, 255, 0.2) 0%,
+    rgba(31, 41, 55, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(208, 172, 255, 0.2) 0%,
+    rgba(31, 41, 55, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(208, 172, 255, 0.2) 0%,
+    rgba(31, 41, 55, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d0acff",endColorstr="#1f2937",GradientType=1);
+}
+
+body {
+  background-color: var(--blue--1000);
+  color: var(--blue--100);
+}
+
+/******************utils*************************/
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  align-self: stretch;
+}
+.space_gap {
+  gap: 1.3rem;
+}
+.flex_start {
+  align-items: flex-start;
+}
+.flex_end {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.max_text {
+  max-width: 37.5rem;
+  align-self: stretch;
+}
+.full_width {
+  width: 100%;
+}
+.bg_100 {
+  background-color: var(--primary-100);
+}
+.bg_50 {
+  background-color: var(--primary-50);
+}
+.color_primary {
+  color: var(--primary);
+}
+.max_width_container {
+  margin: 0 auto;
+  max-width: 2000px;
+}
+/****************************************buttons**********************************************************************************************************************************/
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  width: max-content;
+  min-width: 2rem;
+}
+button.primary {
+  padding: 0.625rem 1.25rem;
+  gap: 0.75rem;
+  border-radius: var(--radius);
+  border: 3px solid var(--purple--light);
+  background-image: var(
+    --light--tranparent--gradient,
+    linear-gradient(261deg, rgba(208, 172, 255, 0.3) 50%, #9747ff 100%)
+  );
+  box-shadow: 0px 7px 25px 0px rgba(151, 71, 255, 0.3);
+
+  color: var(--blue-300, #e5e7eb);
+}
+button.secondary {
+  padding: 0.625rem 1.25rem;
+  gap: 0.75rem;
+  border-radius: var(--radius);
+  background: var(--transparent-white);
+  backdrop-filter: blur(3px);
+  color: var(--blue-300, #e5e7eb);
+}
+/****************************************layout**********************************************************************************************************************************/
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  display: flex;
+  padding: 5rem 4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+  align-self: stretch;
+  flex-direction: column;
+}
+/****************************************font**********************************************************************************************************************************/
+.title {
+  color: var(--blue-100, #f9fafb);
+  font-family: 'Syne', Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+}
+.title span {
+  background: var(
+    --Light-gradient,
+    linear-gradient(261deg, #d0acff 44.71%, #9747ff 93.29%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+/****************************************liner**********************************************************************************************************************************/
+.liner {
+  display: flex;
+  padding: 1rem 0rem 1rem 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.6rem;
+  align-self: stretch;
+  font-size: 0.8rem;
+  border-radius: 4rem 0rem 0rem 0rem;
+  background: var(--blue-1000, #0c1323);
+  position: absolute;
+  right: 0px;
+  bottom: -1px;
+  max-width: 250px;
+}
+.liner p {
+  position: relative;
+  color: var(--blue-200, #f3f4f6);
+}
+.liner span {
+  font-weight: 500;
+  color: var(--blue-400, #f3f4f6);
+}
+.liner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: -2px;
+  left: 0px;
+  background-color: var(--blue--1000);
+}
+.liner p::after {
+  content: '';
+  position: absolute;
+  background-color: transparent;
+  width: 45px;
+  margin-left: -52px;
+  height: 31px;
+  left: -20px;
+  bottom: -17px;
+  border-radius: 0px 0px 50px 0px;
+  box-shadow: 21px 2px 0px 0px var(--blue--1000);
+}
+/******************scrollbar**********************/
+/* Estilos para navegadores WebKit (Google Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 16px;
+}
+
+/* Riel de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background: var(--blue--800);
+}
+
+/* Barra */
+::-webkit-scrollbar-thumb {
+  background: var(--blue--200);
+  border-radius: 6px;
+}
+
+/* Esquina de la barra de desplazamiento (superior izquierda) */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Botones de flecha (arriba y abajo) */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/****************************************breakpoints**********************************************************************************************************************************/
+/* xs */
+@media (min-width: 320px) {
+  .title {
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 560px) {
+  .liner {
+    max-width: max-content;
+  }
+  .liner p::after {
+    left: -17px;
+  }
+}
+/* sm */
+@media (min-width: 640px) {
+  .liner {
+    padding: 1.25rem 2rem;
+    font-size: 1rem;
+  }
+  .liner p::after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 45px;
+    margin-left: -52px;
+    height: 31px;
+    left: -19px;
+    bottom: -21px;
+    border-radius: 0px 0px 50px 0px;
+    box-shadow: 21px 2px 0px 0px var(--blue--1000);
+  }
+}
+/* md */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+  .title {
+    font-size: 3rem;
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+  .title {
+    font-size: 3.5rem;
+  }
+}
+/* xl */
+@media (min-width: 1280px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  button {
+    font-size: 1.25rem;
+  }
+}
+/* 2xl	 */
+@media (min-width: 1400px) {
+}
