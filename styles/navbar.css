@@ -271,6 +271,9 @@
   .navbar {
     border-radius: var(--radius);
   }
+  .items {
+    flex-direction: row;
+  }
   .mobile_responsive {
     display: none;
   }
@@ -295,7 +298,6 @@
   }
   .items {
     display: flex;
-    flex-direction: row;
     width: auto;
     height: fit-content;
     background-color: transparent;

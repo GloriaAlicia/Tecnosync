@@ -86,10 +86,12 @@ footer a {
     flex-direction: row;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 560px) {
   .logo_socials_container {
     flex-direction: row;
   }
+}
+@media (min-width: 600px) {
 }
 /* sm */
 @media (min-width: 640px) {
