@@ -15,7 +15,7 @@
 .navbar {
   width: -webkit-fill-available;
   width: -moz-available;
-  max-width: 2000px;
+  max-width: var(--max--width);
   display: flex;
   justify-content: space-between;
   align-items: center;
