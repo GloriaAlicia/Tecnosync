@@ -24,17 +24,12 @@
 }
 @media (min-height: 500px) and (max-height: 850px) {
   .hero_landing {
-    height: calc(100vh - 90px);
+    height: calc(100vh - 90px - 50px);
   }
 }
 @media (min-height: 500px) and (max-height: 850px) and (min-width: 300px) and (max-width: 400px) {
   .hero_landing {
     height: calc(100vh - 90px - 3rem);
-  }
-}
-@media (min-height: 800px) {
-  .hero_landing {
-    min-height: 650px;
   }
 }
 @media (min-height: 900px) and (max-width: 500px) {
@@ -175,9 +170,6 @@ main {
   width: 100%;
 }
 /****************************************content**********************************************************************************************************************************/
-.space_between_aux {
-  justify-content: space-between;
-}
 .container_cards_services_home {
   display: grid;
   gap: 1.3rem;
@@ -199,9 +191,28 @@ main {
   align-items: stretch;
   gap: 2rem;
   border-radius: var(--radius);
-  background: linear-gradient(#211b43, #2e2058) padding-box,
-    var(--card--gradient--stroke) border-box;
+  position: relative;
+}
+.more_card::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
   border: 2px solid transparent;
+  background: linear-gradient(
+      30deg,
+      var(--blue--900),
+      var(--purple--light),
+      var(--purple--light-200)
+    )
+    border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
 }
 .more_card > span {
   color: var(--purple-light-200, #d0acff);
@@ -224,9 +235,9 @@ main {
     flex-direction: row;
     padding-bottom: 4rem;
   }
-  .hero_landing {
+  /* .hero_landing {
     padding-top: 3rem;
-  }
+  } */
 }
 @media (min-height: 500px) and (max-height: 800px) and (min-width: 400px) {
   .hero_landing {
@@ -238,20 +249,82 @@ main {
     padding: 0px;
     justify-content: center;
   }
-  .landing_text {
+  .landing_text,
+  .hidden_button_home {
     display: block;
   }
   .buttons_container {
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 350px) and (max-width: 800px) {
+  /* mobile hero  */
+  .hero_landing {
+    position: relative;
+    justify-content: flex-start;
+    background-image: radial-gradient(
+      140% 107.13% at 50% 10%,
+      #010314b0 37.41%,
+      rgb(151 71 255) 69.27%,
+      #fff 100%
+    );
+  }
+  .hero_picture_container {
+    position: absolute;
+    top: 150px;
+    z-index: -1;
+  }
+  .hero_laptop_home {
+    width: 480px;
+    height: auto;
+  }
+  .content_landing {
+    padding-top: 5rem;
+    /* padding-left: 4rem; */
+    gap: 2rem;
+  }
+  .landing_text {
+    display: block;
+    max-width: 400px;
   }
   .hidden_button_home {
     display: block;
   }
 }
-@media (max-width: 630px) and (min-width: 400px) {
-  .buttons_container {
-    justify-content: flex-start;
+@media (min-width: 350px) and (max-width: 450px) {
+  /* mobile hero  */
+  .hero_laptop_home {
+    width: 430px;
+  }
+  .liner {
+    max-width: 260px;
+  }
+  .liner::after {
+    width: 44px;
+    margin-left: -38px;
+    height: 70px;
+  }
+}
+@media (min-width: 450px) and (max-width: 800px) {
+  /* mobile hero  */
+  .hero_laptop_home {
+    width: 500px;
+    max-width: 500px;
+    height: auto;
+    max-height: 400px;
+  }
+}
+@media (min-width: 670px) and (max-width: 750px) {
+  /* mobile hero  */
+  .content_landing {
+    padding-left: 4rem;
+  }
+}
+@media (min-width: 760px) and (max-width: 800px) {
+  /* mobile hero  */
+  .hero_picture_container {
+    top: 60px;
   }
 }
 @media (min-width: 640px) {
@@ -259,9 +332,9 @@ main {
     padding-bottom: 6rem;
     gap: 1rem;
   }
-  .hero_laptop_home {
+  /* .hero_laptop_home {
     max-height: 280px;
-  }
+  } */
   .who_section {
     align-items: flex-start;
   }
@@ -290,13 +363,15 @@ main {
   }
 }
 /* md */
+@media (min-width: 800px) {
+  .hero_laptop_home {
+    max-height: 300px;
+  }
+}
 @media (min-width: 768px) {
   .hero_landing {
     flex-direction: row;
     padding: 0rem 4rem;
-  }
-  .hero_laptop_home {
-    max-height: 300px;
   }
   .content_landing {
     gap: 2.5rem;
@@ -306,7 +381,6 @@ main {
     max-width: 31rem;
   }
   .buttons_container {
-    justify-content: flex-start;
     padding: 0px;
   }
   .container_counter {
@@ -375,27 +449,7 @@ main {
     height: calc(100vh - 98px);
   }
 }
-@media (max-width: 1100px) and (min-width: 1020px) {
-  .responsive_service_content_aux {
-    flex-direction: row;
-  }
-  .services_aux {
-    flex-direction: column;
-  }
-  .container_cards_services_home {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .more_card {
-    grid-column: span 3;
-    flex-direction: row-reverse;
-  }
-}
-@media (max-width: 920px) {
-  .services_aux {
-    flex-direction: column;
-  }
-}
-@media (min-width: 650px) and (max-width: 920px) {
+@media (min-width: 650px) and (max-width: 1024px) {
   .services_aux {
     flex-direction: column;
   }
@@ -408,9 +462,47 @@ main {
     height: calc(100% - 2.5rem - 4px);
   }
 }
+@media (min-width: 1024px) and (max-width: 1100px) {
+  .responsive_service_content_aux {
+    flex-direction: row;
+  }
+  .services_aux {
+    flex-direction: column;
+  }
+  .container_cards_services_home {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .more_card {
+    grid-column: span 3;
+    flex-direction: row-reverse;
+    height: fit-content;
+  }
+}
+@media (max-width: 920px) {
+  .services_aux {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1280px) {
+  /* desktop 2 rows 2 columns ---- service home */
+  .container_cards_services_home {
+    /* width: 50%; */
+    grid-template-rows: repeat(2, minmax(0px, 1fr));
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+  .more_card,
+  .card_gradient_square {
+    height: calc(100% - 2.5rem - 4px);
+  }
+}
+@media (min-width: 1100px) {
+  .container_cards_services_home {
+    width: 50%;
+  }
+}
 @media (min-width: 920px) {
   .card_gradient_square {
-    max-width: 260px;
+    width: calc(100% - 2.5rem - 4px);
   }
 }
 
@@ -438,9 +530,6 @@ main {
   .container_cards_services_home {
     grid-template-rows: repeat(2, minmax(0px, 250px));
     grid-template-columns: repeat(2, minmax(200px, 1fr));
-  }
-  .more_card {
-    height: calc(220px - 2.5rem - 4px);
   }
 }
 /* 2xl	 */

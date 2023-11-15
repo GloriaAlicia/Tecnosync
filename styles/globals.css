@@ -5,7 +5,7 @@
 
   --transparent-white: hsla(210, 20%, 98%, 0.15);
   --solid--transparent: #242a39;
-  --blue--1000: hsla(222, 48.9%, 9.2%, 1);
+  --blue--1000: #010314;
   --blue--900: hsla(215, 27.9%, 16.9%, 1);
   --blue--800: hsla(217, 19.1%, 26.7%, 1);
   --blue--700: hsla(215, 13.8%, 34.1%, 1);
@@ -22,7 +22,7 @@
     65% 80% at 50% 100%,
     #9747ff 0%,
     #9747ff2e 60%,
-    #0c1323 85%
+    var(--blue--1000) 85%
   );
   --light--gradient: linear-gradient(
     90deg,
@@ -116,20 +116,9 @@ main {
   flex-direction: column;
   gap: 1.3rem;
 }
-.flex_start {
-  align-items: flex-start;
-}
-.flex_end {
-  align-items: flex-end;
-  justify-content: flex-end;
-}
 .flex_self_end {
   align-self: flex-end;
   justify-self: flex-end;
-}
-.max_text {
-  max-width: 440px;
-  align-self: stretch;
 }
 .relative_position {
   position: relative;
@@ -147,6 +136,19 @@ main {
 .max_width_container {
   margin: 0 auto;
   max-width: 2000px;
+}
+.space_between_aux {
+  justify-content: space-between;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  gap: 0.3rem;
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--transparent-white, rgba(249, 250, 251, 0.1));
 }
 /****************************************buttons**********************************************************************************************************************************/
 button {
@@ -269,8 +271,8 @@ button.default {
 .gradient_section {
   background-image: var(--section--gradient);
 }
-.container_hero p {
-  max-width: 450px;
+.container_hero_text {
+  max-width: 400px;
 }
 .text_hero_container {
   display: flex;
@@ -310,7 +312,7 @@ button.default {
   align-items: center;
   gap: 1.25rem;
   border-radius: var(--radius);
-  background: linear-gradient(30deg, #211b43, #564b7a, #3f3a5c) padding-box,
+  background: linear-gradient(30deg, #211b43, var(--purple--light)) padding-box,
     var(--card--gradient--stroke) border-box;
   border: 2px solid transparent;
   height: fit-content;
@@ -352,8 +354,9 @@ button.default {
 }
 .sub_h5 {
   color: var(--purple-light-200, #d0acff);
-  font-family: Syne;
+  font-family: 'Syne', Helvetica, sans-serif;
   font-size: 1.5rem;
+  font-weight: 400;
 }
 /****************************************liner**********************************************************************************************************************************/
 .liner {
@@ -365,11 +368,10 @@ button.default {
   align-self: stretch;
   font-size: 0.8rem;
   border-radius: 4rem 0rem 0rem 0rem;
-  background: var(--blue-1000, #0c1323);
+  background: var(--blue--1000, #0c1323);
   position: absolute;
   right: 0px;
   bottom: -1px;
-  max-width: 250px;
   min-height: 18.39px;
 }
 .liner p {
@@ -395,7 +397,7 @@ button.default {
   background-color: transparent;
   width: 45px;
   margin-left: -35px;
-  height: 100%;
+  height: 63px;
   left: 0px;
   bottom: 0px;
   border-radius: 0px 0px 50px 0px;
@@ -493,6 +495,13 @@ button.default {
 @media (min-width: 1024px) {
   .title {
     font-size: 3.5rem;
+  }
+  .max_text {
+    max-width: 440px;
+    align-self: stretch;
+  }
+  .sub_h5 {
+    font-size: 3rem;
   }
 }
 /* xl */

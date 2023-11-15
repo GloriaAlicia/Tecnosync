@@ -55,15 +55,6 @@ footer a {
   align-items: flex-start;
   gap: 6px;
 }
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  padding: 10px;
-  border-radius: var(--radius);
-  background: var(--transparent-white, rgba(249, 250, 251, 0.1));
-}
 .flex_footer_container_cards {
   display: flex;
   flex-direction: column;
@@ -80,7 +71,7 @@ footer a {
 .links_terms_footer {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  align-items: end;
   gap: 0.8rem;
 }
 /******************breakpoints**********************/
