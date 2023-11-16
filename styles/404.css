@@ -1,0 +1,32 @@
+.container_404 {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.text_404 {
+  color: var(--blue-100, #f9fafb);
+  font-family: Syne;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.button_container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  align-self: stretch;
+}
+@media (min-width: 400px) {
+  .text_404 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 758px) {
+}
+@media (min-width: 900px) {
+  .container_404 {
+    flex-direction: row;
+    height: calc(100vh - 2.5rem - 82px);
+  }
+}

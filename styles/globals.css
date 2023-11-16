@@ -124,6 +124,11 @@ main {
 .relative_position {
   position: relative;
 }
+.container_set_mini {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
 .container_set {
   display: flex;
   flex-direction: column;
@@ -346,7 +351,7 @@ button.default {
   border: 2px solid transparent;
   height: fit-content;
 }
-/****************************************font**********************************************************************************************************************************/
+/****************************************fonts**********************************************************************************************************************************/
 .title {
   color: var(--blue-100, #f9fafb);
   font-family: 'Syne', Helvetica, sans-serif;
@@ -386,6 +391,11 @@ button.default {
   font-family: 'Syne', Helvetica, sans-serif;
   font-size: 2rem;
   font-weight: 400;
+}
+.bold_sub {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
 }
 /****************************************liner**********************************************************************************************************************************/
 .liner {
