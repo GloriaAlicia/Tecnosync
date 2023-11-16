@@ -74,9 +74,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.5rem;
+  gap: 1rem;
   align-self: stretch;
-  justify-content: end;
 }
 .hidden_button_home {
   display: none;
@@ -112,7 +111,7 @@ main {
   top: 50px;
   left: 50%;
   margin-left: calc(100% / 2 * -1);
-  opacity: 0.3;
+  opacity: 0.5;
   mix-blend-mode: overlay;
   z-index: -1;
 }
@@ -330,7 +329,6 @@ main {
 @media (min-width: 640px) {
   .buttons_container {
     padding-bottom: 6rem;
-    gap: 1rem;
   }
   /* .hero_laptop_home {
     max-height: 280px;

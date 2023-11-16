@@ -1,0 +1,279 @@
+.text_layout_horizontal {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+.banner_divider {
+  display: flex;
+  padding: 2.5rem 4.375rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+  align-self: stretch;
+  background: var(
+    --dark-gradient,
+    linear-gradient(30deg, #1f2937 0%, rgba(12, 19, 35, 0.1) 90%)
+  );
+}
+.banner_text_divider {
+  color: var(--purple-light-200, #d0acff);
+  font-family: Syne;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.plans_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.25rem;
+}
+.content_column_services {
+  flex-direction: column;
+}
+.container_image_services {
+  width: 100%;
+  max-width: 200px;
+  padding: 0rem 3rem;
+  display: flex;
+  align-self: center;
+}
+.image_services {
+  padding: 0rem 3rem;
+  display: flex;
+  align-self: center;
+}
+.double_container {
+  flex-direction: column;
+}
+.container_plans_cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.375rem;
+  align-self: stretch;
+}
+.plan_styles {
+  display: flex;
+  padding: 1.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex: 1 0 0;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+.plan_default::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  background: var(--card--gradient--stroke) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+.plan_pro {
+  border-radius: var(--radius);
+  background: linear-gradient(30deg, var(--blue--1000), hsl(266deg 57% 43%))
+      padding-box,
+    linear-gradient(
+        30deg,
+        var(--blue--900),
+        var(--purple--light),
+        var(--purple--light-200)
+      )
+      border-box;
+  border: 2px solid transparent;
+}
+.header_plan {
+  display: flex;
+  padding-bottom: 0.75rem;
+  align-items: flex-start;
+  gap: 0.75rem;
+  align-self: stretch;
+  border-bottom: 1px solid var(--transparent-white, rgba(208, 172, 255, 0.2));
+}
+.title_header {
+  color: var(--purple--light-200, #d0acff);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.little_text_header {
+  font-size: 0.9375rem;
+}
+.item_plan_card {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+}
+.item_plan_card p {
+  font-size: 14px;
+}
+.content_features {
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+}
+.all_incluided {
+  display: flex;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: var(--radius);
+  background: var(--transparent-white, rgba(249, 250, 251, 0.1));
+}
+/****************************************breakpoints**********************************************************************************************************************************/
+/* sm */
+@media (min-width: 350px) {
+  .container_image_services {
+    max-width: 220px;
+  }
+  .plans_container {
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 400px) {
+  .plans_container {
+    padding: 2rem;
+    border-radius: var(--radius);
+    background-color: var(--transparent-white);
+  }
+}
+@media (min-width: 768px) {
+  .text_layout_horizontal {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  .banner_text_divider {
+    font-size: 2rem;
+  }
+  .content_column_services {
+    flex-direction: row;
+    align-items: center;
+  }
+  .reverse_content {
+    flex-direction: row-reverse;
+  }
+  .container_plans_cards {
+    flex-direction: row;
+  }
+  .plans_container {
+    padding: 3rem;
+    border: 2px solid var(--blue--900);
+    background: rgb(31, 41, 55);
+    background: -moz-linear-gradient(
+      30deg,
+      var(--transparent-white) 0%,
+      var(--blue--1000) 70%
+    );
+    background: -webkit-linear-gradient(
+      30deg,
+      var(--transparent-white) 0%,
+      var(--blue--1000) 70%
+    );
+    background: linear-gradient(
+      30deg,
+      var(--transparent-white) 0%,
+      var(--blue--1000) 70%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f2937",endColorstr="#010314",GradientType=1);
+  }
+}
+@media (min-width: 768px) and (max-width: 1110px) {
+  /* tablet */
+  .header_plan {
+    flex-direction: column;
+  }
+  .item_plan_card {
+    align-items: baseline;
+  }
+  .container_plans_cards {
+    flex-wrap: wrap;
+  }
+  .plan_default {
+    min-width: 200px;
+    height: 100%;
+  }
+  .plan_pro {
+    width: -webkit-fill-available;
+    width: -moz-available;
+  }
+}
+@media (min-width: 900px) and (max-width: 1100px) {
+  /* tablet */
+  .header_plan {
+    flex-direction: column;
+  }
+  .item_plan_card {
+    align-items: baseline;
+  }
+  .container_plans_cards {
+    flex-wrap: wrap;
+  }
+  .plan_default {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    max-width: 700px;
+  }
+  .plan_pro {
+    width: -webkit-fill-available;
+    width: -moz-available;
+  }
+}
+@media (min-width: 950px) and (max-width: 1100px) {
+  /* tablet */
+  .container_plans_cards {
+    flex-direction: column;
+  }
+  .plan_styles {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 900px;
+  }
+  .content_features {
+    min-width: 300px;
+  }
+  .content_features p {
+    max-width: 300px;
+  }
+}
+@media (min-width: 980px) {
+  .no_padding_service_phone {
+    gap: 0rem;
+  }
+}
+/* lg */
+@media (min-width: 1110px) {
+  .max_text_500 {
+    max-width: 500px;
+  }
+  .content_column_services {
+    gap: 4.3rem;
+  }
+  .item_plan_card p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+}
+@media (min-width: 1400px) {
+  .plans_container {
+    padding: 4rem;
+  }
+}

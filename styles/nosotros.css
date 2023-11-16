@@ -20,7 +20,7 @@
   position: absolute;
   left: 0px;
   top: 100px;
-  opacity: 0.3;
+  opacity: 0.5;
   mix-blend-mode: overlay;
   z-index: -1;
 }
