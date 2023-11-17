@@ -1,0 +1,179 @@
+main {
+  gap: 0rem;
+}
+.container_contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  align-self: stretch;
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+.inputs_container_contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.column_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+.input_container {
+  display: flex;
+  width: 28.125rem;
+  padding: 0.6rem;
+  flex-direction: column;
+  /* gap: 0.2rem; */
+  border-radius: 0.875rem;
+  border: 2px solid var(--transparent-white, rgba(249, 250, 251, 0.1));
+  background: var(--transparent-white, rgba(249, 250, 251, 0.1));
+  color: var(--blue-100, #f9fafb);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  cursor: pointer;
+}
+.input_container > input {
+  height: 1.3rem;
+  font-size: 1rem;
+  color: var(--blue--100);
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+.input_container > input::placeholder {
+  color: var(--blue-600, #6b7280);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+}
+.container_inputs_options {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.container_select {
+  display: flex;
+  padding: 0.8rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  align-self: stretch;
+  border-radius: 0.875rem;
+  border: 2px solid var(--transparent-white, rgba(249, 250, 251, 0.1));
+}
+.input_option {
+  display: flex;
+  padding: 0.5rem 0.8rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 0.875rem;
+  border: 2px solid var(--transparent-white, rgba(249, 250, 251, 0.1));
+  background: var(--transparent-white, rgba(249, 250, 251, 0.1));
+  cursor: pointer;
+}
+.check_input {
+  height: 0px;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  display: inline-block;
+  appearance: none;
+  position: relative;
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid var(--transparent-white);
+  cursor: pointer;
+  overflow: hidden;
+}
+.check_input:checked {
+  border: 1px solid var(--purple--light-200);
+  background-color: var(--purple--light-200);
+}
+.check_input:checked::before {
+  height: 28px;
+  width: 28px;
+  opacity: 1;
+}
+.check_input::before {
+  content: url('../assets/icons/little-check.svg');
+  display: block;
+  height: 0px;
+  width: 0px;
+  background-color: transparent;
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transition: all 0.3s ease 0s;
+  margin-left: -8px;
+  margin-top: 2px;
+  mix-blend-mode: difference;
+}
+/************************************breakpoints**********************************************************************************************************/
+/* sm */
+@media (min-width: 640px) {
+  .container_contact {
+    padding: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .inputs_container_contact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.875rem;
+    align-self: stretch;
+    width: -webkit-fill-available;
+    width: -moz-available;
+  }
+  .container_contact {
+    padding: 2rem;
+    border: 2px solid var(--blue--900);
+    border-radius: var(--radius);
+    border: 3px solid var(--blue--900, rgba(249, 250, 251, 0.1));
+    background: radial-gradient(
+      7037.92% 141.55% at 100.18% 0%,
+      rgba(12, 19, 35, 0.1) 0%,
+      #1f2937 100%
+    );
+    backdrop-filter: blur(20px);
+    background: rgb(31, 41, 55);
+    background: -moz-linear-gradient(
+      30deg,
+      var(--transparent-white) 0%,
+      var(--blue--1000) 70%
+    );
+    background: -webkit-linear-gradient(
+      30deg,
+      var(--transparent-white) 0%,
+      var(--blue--1000) 70%
+    );
+    background: linear-gradient(
+      30deg,
+      var(--transparent-white) 0%,
+      var(--blue--1000) 70%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f2937",endColorstr="#010314",GradientType=1);
+  }
+}
+/* lg */
+@media (min-width: 900px) {
+  .inputs_container_contact {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .container_contact {
+    padding: 1.8rem 4rem;
+  }
+}
+/* xl */
+@media (min-width: 1280px) {
+}

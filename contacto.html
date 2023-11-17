@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/miniReset.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
-    <!-- <link rel="stylesheet" href="./styles/inicio.css" /> -->
+    <link rel="stylesheet" href="./styles/contacto.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
 
     <!-- fonts -->
@@ -74,9 +74,7 @@
     </header>
 
     <main>
-      <section
-        class="container_section"
-        style="display: flex; align-items: center; justify-content: center">
+      <section class="container_section" style="align-items: center">
         <img
           src="./assets/images/arroba.png"
           alt="contacto"
@@ -91,6 +89,128 @@
             objetivos.
           </p>
         </div>
+      </section>
+
+      <section class="container_section">
+        <section class="container_contact">
+          <h2 class="subtitle">Email</h2>
+          <div class="inputs_container_contact">
+            <div class="column_inputs">
+              <label for="name" class="input_container">
+                Nombre
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Jane Smith" />
+              </label>
+
+              <label for="email" class="input_container">
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="user@example.com" />
+              </label>
+
+              <label for="direccion" class="input_container">
+                Dirección
+                <input
+                  type="text"
+                  name="direccion"
+                  id="direccion"
+                  placeholder="Escribe aquí tu dirección completa." />
+              </label>
+
+              <label for="tel" class="input_container">
+                Teléfono
+                <input
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                  placeholder="+1 000 000 0000"
+                  pattern="[0-9]+" />
+              </label>
+            </div>
+
+            <div class="column_inputs">
+              <fieldset class="container_select">
+                <legend>¿En que podemos ayudarte?</legend>
+
+                <article class="container_inputs_options">
+                  <label class="input_option">
+                    <input
+                      type="radio"
+                      name="asunto"
+                      value="dev-web"
+                      checked
+                      class="check_input" />
+                    Dev Web
+                  </label>
+
+                  <label class="input_option">
+                    <input
+                      type="radio"
+                      name="asunto"
+                      value="dev-mobile"
+                      class="check_input" />
+                    Dev Mobile
+                  </label>
+
+                  <label class="input_option">
+                    <input
+                      type="radio"
+                      name="asunto"
+                      value="identidad-de-marca"
+                      class="check_input" />
+                    Identidad de marca
+                  </label>
+
+                  <label class="input_option">
+                    <input
+                      type="radio"
+                      name="asunto"
+                      value="proyectos-o-productos"
+                      class="check_input" />
+                    Proyectos o Productos
+                  </label>
+
+                  <label class="input_option">
+                    <input
+                      type="radio"
+                      name="asunto"
+                      value="hosting"
+                      class="check_input" />
+                    Hosting
+                  </label>
+
+                  <label class="input_option">
+                    <input
+                      type="radio"
+                      name="asunto"
+                      value="social-media"
+                      class="check_input" />
+                    Social media
+                  </label>
+                </article>
+              </fieldset>
+
+              <label for="mensaje" class="input_container">
+                Mensaje
+                <input
+                  type="text"
+                  name="mensaje"
+                  id="mensaje"
+                  placeholder="Jane Smith"
+                  style="height: 3rem" />
+              </label>
+            </div>
+          </div>
+          <button class="primary" style="align-self: flex-end">
+            Consultar
+          </button>
+        </section>
       </section>
     </main>
 
