@@ -17,7 +17,7 @@
   --blue--100: hsla(210, 20%, 98%, 1);
   --purple--light: hsla(266, 100%, 63.9%, 1);
   --purple--light-200: hsla(266, 100%, 83.7%, 1);
-
+  --purple--light-highlight: rgb(111, 0, 255);
   --hero--gradient: radial-gradient(
     75% 80% at 50% 100%,
     #ac6cff 0%,
@@ -101,6 +101,126 @@ main {
   flex-direction: column;
   gap: 1.5rem;
   padding-bottom: 3rem;
+}
+/**********************loader*********************/
+body {
+  overflow: hidden; /* Deshabilitar el desplazamiento del cuerpo de la página */
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: opacity 0.5s;
+  background-color: var(--blue--1000);
+  background-image: var(--hero--gradient);
+}
+.pyramid-loader {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  display: block;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: spin 4s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.pyramid-loader .wrapper .side {
+  width: 70px;
+  height: 70px;
+  /* you can choose any gradient or color you want */
+  background: radial-gradient(#000 10%, #f0f 70%, #000 120%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.pyramid-loader .wrapper .side1 {
+  transform: rotateZ(-30deg) rotateY(90deg);
+  background: linear-gradient(45deg, var(--blue--100), var(--purple--light));
+}
+
+.pyramid-loader .wrapper .side2 {
+  transform: rotateZ(30deg) rotateY(90deg);
+  background: linear-gradient(
+    45deg,
+    var(--purple--light),
+    var(--purple--light-200)
+  );
+}
+
+.pyramid-loader .wrapper .side3 {
+  transform: rotateX(30deg);
+  background: linear-gradient(
+    90deg,
+    var(--purple--light-200),
+    var(--purple--light-highlight)
+  );
+}
+
+.pyramid-loader .wrapper .side4 {
+  transform: rotateX(-30deg);
+  background: linear-gradient(
+    45deg,
+    var(--purple--light-highlight),
+    var(--purple--light-200)
+  );
+}
+
+.pyramid-loader .wrapper .shadow {
+  width: 60px;
+  height: 60px;
+  background: var(--purple--light);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotateX(90deg) translateZ(-40px);
+  filter: blur(12px);
+}
+
+.logo_loader {
+  width: 200px;
+}
+.close_loader {
+  animation-name: close_load;
+  animation-duration: 0.5s;
+}
+@keyframes close_load {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
 }
 /******************utils*************************/
 .flex {
